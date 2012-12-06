@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HwL-Kf-sxO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iij-yy-Pyl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <viewController storyboardIdentifier="LAHomePageControllerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="LAHomePageControllerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of food I ate for lunch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hLO-ba-yAg">
@@ -57,30 +57,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="10"/>
+            <point key="canvasLocation" x="740" y="-510"/>
         </scene>
         <!--My Lunch Controller - My Lunch-->
         <scene sceneID="5Dm-p7-Hfk">
             <objects>
                 <viewController storyboardIdentifier="LAMyLunchController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IPv-Ln-IKZ" customClass="LAMyLunchController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rSU-4x-VQb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="0Zq-AE-7un">
-                                <rect key="frame" x="20" y="80" width="125" height="125"/>
+                                <rect key="frame" x="20" y="80" width="125" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="FKJ-UD-Anp">
-                                <rect key="frame" x="175" y="80" width="125" height="125"/>
+                                <rect key="frame" x="175" y="80" width="125" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="6O2-sV-nYv">
-                                <rect key="frame" x="20" y="211" width="125" height="125"/>
+                                <rect key="frame" x="20" y="211" width="125" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="kcR-zK-Su3">
-                                <rect key="frame" x="175" y="211" width="125" height="125"/>
+                                <rect key="frame" x="175" y="211" width="125" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCk-Za-gmZ">
@@ -118,14 +118,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4F-7U-f9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560" y="10"/>
+            <point key="canvasLocation" x="1696" y="-510"/>
         </scene>
         <!--Add Photos Controller - Add Photos-->
         <scene sceneID="ibb-RH-Xfb">
             <objects>
                 <viewController restorationIdentifier="LAAddPhotosController" storyboardIdentifier="LAAddPhotosController" id="kuh-Pp-3kC" customClass="LAAddPhotosController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JaX-8s-iEk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Photos To Your Lunch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oxk-3K-zBE">
@@ -203,12 +203,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXg-48-Y3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="10"/>
+            <point key="canvasLocation" x="1213" y="-510"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="zMU-MI-Seo">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="iij-yy-Pyl" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VTQ-Yt-WvP">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HwL-Kf-sxO" kind="relationship" relationship="viewControllers" id="yel-hj-uGF"/>
+                        <segue destination="neU-Ae-Fhd" kind="relationship" relationship="viewControllers" id="KoP-1f-xrV"/>
+                        <segue destination="AXE-Ru-gAB" kind="relationship" relationship="viewControllers" id="wlI-o9-UpN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJY-13-qua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="345"/>
+        </scene>
+        <!--Brief Table List Of Lunches Controller - List-->
+        <scene sceneID="vRH-0O-hYM">
+            <objects>
+                <tableViewController storyboardIdentifier="LABriefTableListOfLunchesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="neU-Ae-Fhd" customClass="LABriefTableListOfLunchesController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7rr-TB-RqE">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5a3-UY-R4j">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="neU-Ae-Fhd" id="Kzk-b7-oqP"/>
+                            <outlet property="delegate" destination="neU-Ae-Fhd" id="Tpf-Gw-VBV"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="List" id="OKc-iF-IZn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aI2-N6-Otk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="259"/>
+        </scene>
+        <!--Camera View Controller - Camera-->
+        <scene sceneID="94T-F1-oFj">
+            <objects>
+                <viewController id="AXE-Ru-gAB" customClass="LACameraViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cbw-fG-USw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" id="eLV-hF-zoa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71J-Rx-wke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="1071"/>
+        </scene>
+        <!--Navigation Controller - Post-->
         <scene sceneID="eKE-6X-eok">
             <objects>
                 <navigationController id="HwL-Kf-sxO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Post" id="wlF-90-cfz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LIR-aP-ld4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -221,7 +287,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6f-mh-h1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="10"/>
+            <point key="canvasLocation" x="97" y="-510"/>
         </scene>
     </scenes>
     <resources>
@@ -231,15 +297,23 @@
         <class className="LAAddPhotosController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAAddPhotosController.h"/>
             <relationships>
+                <relationship kind="action" name="continue:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="photoFour" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="photoOne" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="photoThree" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="photoTwo" candidateClass="UIButton"/>
             </relationships>
         </class>
+        <class className="LABriefTableListOfLunchesController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LABriefTableListOfLunchesController.h"/>
+        </class>
+        <class className="LACameraViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LACameraViewController.h"/>
+        </class>
         <class className="LAHomePageControllerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHomePageControllerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="clicktoContinue:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="descriptionOfFood" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="nameOfFood" candidateClass="UITextField"/>
             </relationships>

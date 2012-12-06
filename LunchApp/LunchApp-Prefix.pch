@@ -13,4 +13,5 @@
     #import <Foundation/Foundation.h>
     #import "LAHelper.h"
     #import "LAHelpMethods.h"
+    #import <CoreData/CoreData.h>
 #endif

@@ -1,0 +1,2 @@
+#!/bin/bash
+mogenerator --model LunchApp/DataContainer.xcdatamodeld/DataContainer.xcdatamodel --machine-dir LunchApp/CoreDataMachine --human-dir LunchApp/CoreDataHuman --template-var arc=true
