@@ -1,5 +1,5 @@
 //
-//  LAViewController.h
+//  LAAddPhotosController.h
 //  LunchApp
 //
 //  Created by Max on 03.12.12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LAViewController : UIViewController
+@interface LAAddPhotosController : UIViewController
 
 @end

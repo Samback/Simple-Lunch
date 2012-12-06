@@ -17,7 +17,13 @@
 		505D772A166D26DD0071D672 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 505D7729166D26DD0071D672 /* Default@2x.png */; };
 		505D772C166D26DD0071D672 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 505D772B166D26DD0071D672 /* Default-568h@2x.png */; };
 		505D772F166D26DD0071D672 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505D772D166D26DD0071D672 /* MainStoryboard.storyboard */; };
-		505D7732166D26DD0071D672 /* LAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D7731166D26DD0071D672 /* LAViewController.m */; };
+		505D773E166D31530071D672 /* LAAddPhotosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D773D166D31530071D672 /* LAAddPhotosController.m */; };
+		505D7741166D31750071D672 /* LAHomePageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D7740166D31750071D672 /* LAHomePageControllerViewController.m */; };
+		505D7744166D31DA0071D672 /* LAMyLunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D7743166D31DA0071D672 /* LAMyLunchController.m */; };
+		505D7755166D36D40071D672 /* LAHelpMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D7754166D36D40071D672 /* LAHelpMethods.m */; };
+		505D7759166D3D2A0071D672 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D7758166D3D2A0071D672 /* QuartzCore.framework */; };
+		505D775D166D44880071D672 /* no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 505D775B166D44880071D672 /* no_photo.png */; };
+		505D775E166D44880071D672 /* no_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 505D775C166D44880071D672 /* no_photo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +41,18 @@
 		505D7729166D26DD0071D672 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		505D772B166D26DD0071D672 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		505D772E166D26DD0071D672 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		505D7730166D26DD0071D672 /* LAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAViewController.h; sourceTree = "<group>"; };
-		505D7731166D26DD0071D672 /* LAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAViewController.m; sourceTree = "<group>"; };
+		505D773C166D31530071D672 /* LAAddPhotosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAAddPhotosController.h; path = Controllers/LAAddPhotosController.h; sourceTree = "<group>"; };
+		505D773D166D31530071D672 /* LAAddPhotosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAAddPhotosController.m; path = Controllers/LAAddPhotosController.m; sourceTree = "<group>"; };
+		505D773F166D31750071D672 /* LAHomePageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHomePageControllerViewController.h; path = Controllers/LAHomePageControllerViewController.h; sourceTree = "<group>"; };
+		505D7740166D31750071D672 /* LAHomePageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHomePageControllerViewController.m; path = Controllers/LAHomePageControllerViewController.m; sourceTree = "<group>"; };
+		505D7742166D31DA0071D672 /* LAMyLunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAMyLunchController.h; path = Controllers/LAMyLunchController.h; sourceTree = "<group>"; };
+		505D7743166D31DA0071D672 /* LAMyLunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAMyLunchController.m; path = Controllers/LAMyLunchController.m; sourceTree = "<group>"; };
+		505D7753166D36D40071D672 /* LAHelpMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHelpMethods.h; path = Helpers/LAHelpMethods.h; sourceTree = "<group>"; };
+		505D7754166D36D40071D672 /* LAHelpMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LAHelpMethods.m; path = Helpers/LAHelpMethods.m; sourceTree = "<group>"; };
+		505D7757166D36FA0071D672 /* LAHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LAHelper.h; path = Helpers/LAHelper.h; sourceTree = "<group>"; };
+		505D7758166D3D2A0071D672 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		505D775B166D44880071D672 /* no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_photo.png; path = Images/no_photo.png; sourceTree = "<group>"; };
+		505D775C166D44880071D672 /* no_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "no_photo@2x.png"; path = "Images/no_photo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505D7759166D3D2A0071D672 /* QuartzCore.framework in Frameworks */,
 				505D7716166D26DD0071D672 /* UIKit.framework in Frameworks */,
 				505D7718166D26DD0071D672 /* Foundation.framework in Frameworks */,
 				505D771A166D26DD0071D672 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +73,7 @@
 		505D7706166D26DC0071D672 = {
 			isa = PBXGroup;
 			children = (
+				505D7758166D3D2A0071D672 /* QuartzCore.framework */,
 				505D771B166D26DD0071D672 /* LunchApp */,
 				505D7714166D26DD0071D672 /* Frameworks */,
 				505D7712166D26DD0071D672 /* Products */,
@@ -83,11 +101,11 @@
 		505D771B166D26DD0071D672 /* LunchApp */ = {
 			isa = PBXGroup;
 			children = (
+				505D7756166D36EC0071D672 /* Helpers */,
+				505D773B166D31140071D672 /* Controllers */,
 				505D7724166D26DD0071D672 /* LAAppDelegate.h */,
 				505D7725166D26DD0071D672 /* LAAppDelegate.m */,
 				505D772D166D26DD0071D672 /* MainStoryboard.storyboard */,
-				505D7730166D26DD0071D672 /* LAViewController.h */,
-				505D7731166D26DD0071D672 /* LAViewController.m */,
 				505D771C166D26DD0071D672 /* Supporting Files */,
 			);
 			path = LunchApp;
@@ -96,6 +114,7 @@
 		505D771C166D26DD0071D672 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				505D775A166D447B0071D672 /* Images */,
 				505D771D166D26DD0071D672 /* LunchApp-Info.plist */,
 				505D771E166D26DD0071D672 /* InfoPlist.strings */,
 				505D7721166D26DD0071D672 /* main.m */,
@@ -105,6 +124,38 @@
 				505D772B166D26DD0071D672 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		505D773B166D31140071D672 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				505D773F166D31750071D672 /* LAHomePageControllerViewController.h */,
+				505D7740166D31750071D672 /* LAHomePageControllerViewController.m */,
+				505D773C166D31530071D672 /* LAAddPhotosController.h */,
+				505D773D166D31530071D672 /* LAAddPhotosController.m */,
+				505D7742166D31DA0071D672 /* LAMyLunchController.h */,
+				505D7743166D31DA0071D672 /* LAMyLunchController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		505D7756166D36EC0071D672 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				505D7757166D36FA0071D672 /* LAHelper.h */,
+				505D7753166D36D40071D672 /* LAHelpMethods.h */,
+				505D7754166D36D40071D672 /* LAHelpMethods.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		505D775A166D447B0071D672 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				505D775B166D44880071D672 /* no_photo.png */,
+				505D775C166D44880071D672 /* no_photo@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +215,8 @@
 				505D772A166D26DD0071D672 /* Default@2x.png in Resources */,
 				505D772C166D26DD0071D672 /* Default-568h@2x.png in Resources */,
 				505D772F166D26DD0071D672 /* MainStoryboard.storyboard in Resources */,
+				505D775D166D44880071D672 /* no_photo.png in Resources */,
+				505D775E166D44880071D672 /* no_photo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +229,10 @@
 			files = (
 				505D7722166D26DD0071D672 /* main.m in Sources */,
 				505D7726166D26DD0071D672 /* LAAppDelegate.m in Sources */,
-				505D7732166D26DD0071D672 /* LAViewController.m in Sources */,
+				505D773E166D31530071D672 /* LAAddPhotosController.m in Sources */,
+				505D7741166D31750071D672 /* LAHomePageControllerViewController.m in Sources */,
+				505D7744166D31DA0071D672 /* LAMyLunchController.m in Sources */,
+				505D7755166D36D40071D672 /* LAHelpMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +314,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchApp/LunchApp-Prefix.pch";
 				INFOPLIST_FILE = "LunchApp/LunchApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +326,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LunchApp/LunchApp-Prefix.pch";
 				INFOPLIST_FILE = "LunchApp/LunchApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

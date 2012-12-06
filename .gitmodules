@@ -1,0 +1,3 @@
+[submodule "libraries/AGImagePicker"]
+	path = libraries/AGImagePicker
+	url = git://github.com/arturgrigor/AGImagePickerController.git
