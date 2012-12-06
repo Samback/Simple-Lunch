@@ -7,6 +7,9 @@
 //
 #import "LAHelper.h"
 #import "LAHelpMethods.h"
+#import <ifaddrs.h>
+#import <arpa/inet.h>
+#import <sys/utsname.h>
 
 @interface LAHelpMethods()
 + (void)saveValue:(NSString *)value forKey:(NSString *)key;
@@ -46,5 +49,30 @@
      NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     return [prefs valueForKey:key];
 }
+
+
++ (NSString *)setUUID
+{
+    // getting an NSString
+    NSString *uuid = nil;
+    // Create universally unique identifier (object)
+    CFUUIDRef uuidObject = CFUUIDCreate(kCFAllocatorDefault);
+    
+    // Get the string representation of CFUUID object.
+    uuid = (__bridge NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidObject);
+    
+    // If needed, here is how to get a representation in bytes, returned as a structure
+    // typedef struct {
+    //   UInt8 byte0;
+    //   UInt8 byte1;
+    //   ...
+    //   UInt8 byte15;
+    // } CFUUIDBytes;
+    CFUUIDBytes bytes = CFUUIDGetUUIDBytes(uuidObject);
+    
+    CFRelease(uuidObject);
+    return uuid;
+}
+
 
 @end

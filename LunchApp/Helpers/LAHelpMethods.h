@@ -15,5 +15,6 @@
 + (void)setDescriptionOfFood:(NSString *)foodDescription;
 
 + (NSString *)descriptionOfFood;
++ (NSString *)setUUID;
 
 @end

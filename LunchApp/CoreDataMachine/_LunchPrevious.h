@@ -5,18 +5,20 @@
 
 
 extern const struct LunchPreviousAttributes {
-	__unsafe_unretained NSString *dataLunch;
+	__unsafe_unretained NSString *dateLunch;
 	__unsafe_unretained NSString *descriptionOfLunch;
 	__unsafe_unretained NSString *nameOfLunch;
 	__unsafe_unretained NSString *uId;
 } LunchPreviousAttributes;
 
 extern const struct LunchPreviousRelationships {
+	__unsafe_unretained NSString *photosOwner;
 } LunchPreviousRelationships;
 
 extern const struct LunchPreviousFetchedProperties {
 } LunchPreviousFetchedProperties;
 
+@class Photos;
 
 
 
@@ -35,10 +37,10 @@ extern const struct LunchPreviousFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSDate* dataLunch;
+@property (nonatomic, strong) NSDate* dateLunch;
 
 
-//- (BOOL)validateDataLunch:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateDateLunch:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -59,15 +61,18 @@ extern const struct LunchPreviousFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSNumber* uId;
+@property (nonatomic, strong) NSString* uId;
 
-
-@property int16_t uIdValue;
-- (int16_t)uIdValue;
-- (void)setUIdValue:(int16_t)value_;
 
 //- (BOOL)validateUId:(id*)value_ error:(NSError**)error_;
 
+
+
+
+
+@property (nonatomic, strong) Photos* photosOwner;
+
+//- (BOOL)validatePhotosOwner:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -82,8 +87,8 @@ extern const struct LunchPreviousFetchedProperties {
 @interface _LunchPrevious (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSDate*)primitiveDataLunch;
-- (void)setPrimitiveDataLunch:(NSDate*)value;
+- (NSDate*)primitiveDateLunch;
+- (void)setPrimitiveDateLunch:(NSDate*)value;
 
 
 
@@ -100,13 +105,15 @@ extern const struct LunchPreviousFetchedProperties {
 
 
 
-- (NSNumber*)primitiveUId;
-- (void)setPrimitiveUId:(NSNumber*)value;
-
-- (int16_t)primitiveUIdValue;
-- (void)setPrimitiveUIdValue:(int16_t)value_;
+- (NSString*)primitiveUId;
+- (void)setPrimitiveUId:(NSString*)value;
 
 
+
+
+
+- (Photos*)primitivePhotosOwner;
+- (void)setPrimitivePhotosOwner:(Photos*)value;
 
 
 @end

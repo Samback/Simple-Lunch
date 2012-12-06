@@ -2,25 +2,12 @@
 
 @implementation LunchPrevious
 
-//+ (LunchPrevious *)withLunchName:(NSString *)nameLunch descriptionOfLunch:(NSString *)descriptionName lunchDate:(NSDate *)dateLunch andUID:(NSString *)uid
-//{
-//    LunchPrevious *lunch = nil;
-//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//    NSManagedObjectContext * context = user.managedObjectContext;
-//    
-//    request.entity = [NSEntityDescription entityForName:@"DayData" inManagedObjectContext:context];
-//    request.predicate = [NSPredicate predicateWithFormat:@"(%K == %@) and (%K == %@)", @"day", currentdate, @"dayOwner", user];
-//    
-//    NSError *error = nil;
-//    dayData = [[context executeFetchRequest:request error:&error] lastObject];
-//    if (!error && !dayData) {
-//        dayData = [NSEntityDescription insertNewObjectForEntityForName:@"DayData" inManagedObjectContext:context];
-//        dayData.day = currentdate;
-//        dayData.userNews = @"";
-//        dayData.dayOwner = user;
-//    }
-//    return dayData;
-//}
-
++ (void)newLunchWithName:(NSString *)name description:(NSString *)description lunchDate:(NSDate *)date andPhotos:(NSArray *)photosArray{
+    LunchPrevious *lunch = [NSEntityDescription insertNewObjectForEntityForName:@"LunchPrevious" inManagedObjectContext:DELEGATE.managedObjectContext];
+    lunch.nameOfLunch = name;
+    lunch.descriptionOfLunch = description;
+    lunch.dateLunch = [NSDate date];
+    lunch.uId = [LAHelpMethods setUUID];    
+}
 
 @end

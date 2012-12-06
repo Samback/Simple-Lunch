@@ -4,13 +4,14 @@
 #import "_LunchPrevious.h"
 
 const struct LunchPreviousAttributes LunchPreviousAttributes = {
-	.dataLunch = @"dataLunch",
+	.dateLunch = @"dateLunch",
 	.descriptionOfLunch = @"descriptionOfLunch",
 	.nameOfLunch = @"nameOfLunch",
 	.uId = @"uId",
 };
 
 const struct LunchPreviousRelationships LunchPreviousRelationships = {
+	.photosOwner = @"photosOwner",
 };
 
 const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
@@ -42,10 +43,6 @@ const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
-	if ([key isEqualToString:@"uIdValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"uId"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-	}
 
 	return keyPaths;
 }
@@ -53,7 +50,7 @@ const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
 
 
 
-@dynamic dataLunch;
+@dynamic dateLunch;
 
 
 
@@ -78,27 +75,12 @@ const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
 
 
 
-- (int16_t)uIdValue {
-	NSNumber *result = [self uId];
-	return [result shortValue];
-}
-
-- (void)setUIdValue:(int16_t)value_ {
-	[self setUId:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitiveUIdValue {
-	NSNumber *result = [self primitiveUId];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveUIdValue:(int16_t)value_ {
-	[self setPrimitiveUId:[NSNumber numberWithShort:value_]];
-}
 
 
 
+@dynamic photosOwner;
 
+	
 
 
 

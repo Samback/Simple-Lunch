@@ -31,6 +31,8 @@
 		50AD58EE1671374B00AD47C2 /* LunchPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD58ED1671374B00AD47C2 /* LunchPrevious.m */; };
 		50AD58F11671375800AD47C2 /* _LunchPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD58F01671375800AD47C2 /* _LunchPrevious.m */; };
 		50AD58FE16713A3200AD47C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD58FD16713A3200AD47C2 /* CoreData.framework */; };
+		50AD592C1671532600AD47C2 /* Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD592B1671532600AD47C2 /* Photos.m */; };
+		50AD592F1671533100AD47C2 /* _Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD592E1671533100AD47C2 /* _Photos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,10 @@
 		50AD58EF1671375800AD47C2 /* _LunchPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _LunchPrevious.h; path = CoreDataMachine/_LunchPrevious.h; sourceTree = "<group>"; };
 		50AD58F01671375800AD47C2 /* _LunchPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _LunchPrevious.m; path = CoreDataMachine/_LunchPrevious.m; sourceTree = "<group>"; };
 		50AD58FD16713A3200AD47C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		50AD592A1671532600AD47C2 /* Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photos.h; path = CoreDataHuman/Photos.h; sourceTree = "<group>"; };
+		50AD592B1671532600AD47C2 /* Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photos.m; path = CoreDataHuman/Photos.m; sourceTree = "<group>"; };
+		50AD592D1671533100AD47C2 /* _Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Photos.h; path = CoreDataMachine/_Photos.h; sourceTree = "<group>"; };
+		50AD592E1671533100AD47C2 /* _Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Photos.m; path = CoreDataMachine/_Photos.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,8 @@
 		50AD58EA1671372200AD47C2 /* CoreMachines */ = {
 			isa = PBXGroup;
 			children = (
+				50AD592D1671533100AD47C2 /* _Photos.h */,
+				50AD592E1671533100AD47C2 /* _Photos.m */,
 				50AD58EF1671375800AD47C2 /* _LunchPrevious.h */,
 				50AD58F01671375800AD47C2 /* _LunchPrevious.m */,
 			);
@@ -199,6 +207,8 @@
 		50AD58EB1671373100AD47C2 /* CoreHuman */ = {
 			isa = PBXGroup;
 			children = (
+				50AD592A1671532600AD47C2 /* Photos.h */,
+				50AD592B1671532600AD47C2 /* Photos.m */,
 				50AD58EC1671374B00AD47C2 /* LunchPrevious.h */,
 				50AD58ED1671374B00AD47C2 /* LunchPrevious.m */,
 			);
@@ -285,6 +295,8 @@
 				50AD58E91671349C00AD47C2 /* DataContainer.xcdatamodeld in Sources */,
 				50AD58EE1671374B00AD47C2 /* LunchPrevious.m in Sources */,
 				50AD58F11671375800AD47C2 /* _LunchPrevious.m in Sources */,
+				50AD592C1671532600AD47C2 /* Photos.m in Sources */,
+				50AD592F1671533100AD47C2 /* _Photos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
