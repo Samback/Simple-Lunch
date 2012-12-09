@@ -89,7 +89,7 @@
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [_currentButton setBackgroundImage:newImage forState:UIControlStateNormal];
-    [_selectedImages setObject:newImage atIndexedSubscript:_currentButton.tag];
+    [_selectedImages setObject:[info objectForKey:UIImagePickerControllerReferenceURL] atIndexedSubscript:_currentButton.tag];
     [self openNext];
     [self dismissModalViewControllerAnimated:YES];
 }
