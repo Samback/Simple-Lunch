@@ -74,5 +74,30 @@
     return uuid;
 }
 
++ (void)imagefromAsset:(NSURL *)referenceURL atImageView:(UIImageView *)imageView andRect:(CGRect )rect{
+   __block UIImage  *copyOfOriginalImage = nil;
+//    NSURL *referenceURL = [info objectForKey:UIImagePickerControllerReferenceURL];
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library assetForURL:referenceURL resultBlock:^(ALAsset *asset)
+     {
+        copyOfOriginalImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
+         
+         CGSize newSize =  rect.size;
+         UIGraphicsBeginImageContext(newSize);         
+         [copyOfOriginalImage drawInRect:CGRectMake(0, 0, newSize.width,newSize.height)];
+         UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+         UIGraphicsEndImageContext();
+         imageView.image = newImage;
+         //rect.origin.y  += 20;
+         imageView.frame = rect;
+         imageView.backgroundColor = [UIColor redColor];
+         [imageView reloadInputViews];
+     }
+            failureBlock:^(NSError *error)
+     {
+         // error handling
+     }];
+}
+
 
 @end

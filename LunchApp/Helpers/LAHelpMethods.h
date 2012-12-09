@@ -16,5 +16,5 @@
 
 + (NSString *)descriptionOfFood;
 + (NSString *)setUUID;
-
++ (void)imagefromAsset:(NSURL *)referenceURL atImageView:(UIImageView *)imageView andRect:(CGRect )rect;
 @end
