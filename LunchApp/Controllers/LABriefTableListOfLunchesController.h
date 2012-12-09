@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LABriefTableListOfLunchesController : UITableViewController
+@interface LABriefTableListOfLunchesController : UITableViewController<NSFetchedResultsControllerDelegate>
 
 @end
