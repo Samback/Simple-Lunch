@@ -7,11 +7,10 @@ const struct LunchPreviousAttributes LunchPreviousAttributes = {
 	.dateLunch = @"dateLunch",
 	.descriptionOfLunch = @"descriptionOfLunch",
 	.nameOfLunch = @"nameOfLunch",
-	.uId = @"uId",
 };
 
 const struct LunchPreviousRelationships LunchPreviousRelationships = {
-	.photosOwner = @"photosOwner",
+	.photos = @"photos",
 };
 
 const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
@@ -71,15 +70,17 @@ const struct LunchPreviousFetchedProperties LunchPreviousFetchedProperties = {
 
 
 
-@dynamic uId;
+@dynamic photos;
 
-
-
-
-
-
-@dynamic photosOwner;
-
+	
+- (NSMutableSet*)photosSet {
+	[self willAccessValueForKey:@"photos"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"photos"];
+  
+	[self didAccessValueForKey:@"photos"];
+	return result;
+}
 	
 
 

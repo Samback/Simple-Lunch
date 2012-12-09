@@ -8,18 +8,16 @@ extern const struct LunchPreviousAttributes {
 	__unsafe_unretained NSString *dateLunch;
 	__unsafe_unretained NSString *descriptionOfLunch;
 	__unsafe_unretained NSString *nameOfLunch;
-	__unsafe_unretained NSString *uId;
 } LunchPreviousAttributes;
 
 extern const struct LunchPreviousRelationships {
-	__unsafe_unretained NSString *photosOwner;
+	__unsafe_unretained NSString *photos;
 } LunchPreviousRelationships;
 
 extern const struct LunchPreviousFetchedProperties {
 } LunchPreviousFetchedProperties;
 
-@class Photos;
-
+@class Photo;
 
 
 
@@ -61,18 +59,10 @@ extern const struct LunchPreviousFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSString* uId;
 
+@property (nonatomic, strong) NSSet* photos;
 
-//- (BOOL)validateUId:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) Photos* photosOwner;
-
-//- (BOOL)validatePhotosOwner:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)photosSet;
 
 
 
@@ -81,6 +71,11 @@ extern const struct LunchPreviousFetchedProperties {
 @end
 
 @interface _LunchPrevious (CoreDataGeneratedAccessors)
+
+- (void)addPhotos:(NSSet*)value_;
+- (void)removePhotos:(NSSet*)value_;
+- (void)addPhotosObject:(Photo*)value_;
+- (void)removePhotosObject:(Photo*)value_;
 
 @end
 
@@ -105,15 +100,9 @@ extern const struct LunchPreviousFetchedProperties {
 
 
 
-- (NSString*)primitiveUId;
-- (void)setPrimitiveUId:(NSString*)value;
 
-
-
-
-
-- (Photos*)primitivePhotosOwner;
-- (void)setPrimitivePhotosOwner:(Photos*)value;
+- (NSMutableSet*)primitivePhotos;
+- (void)setPrimitivePhotos:(NSMutableSet*)value;
 
 
 @end
