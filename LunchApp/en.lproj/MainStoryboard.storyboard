@@ -67,20 +67,20 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="0Zq-AE-7un">
-                                <rect key="frame" x="20" y="80" width="125" height="76"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="0Zq-AE-7un">
+                                <rect key="frame" x="20" y="64" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="FKJ-UD-Anp">
-                                <rect key="frame" x="175" y="80" width="125" height="76"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="FKJ-UD-Anp">
+                                <rect key="frame" x="175" y="64" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="6O2-sV-nYv">
-                                <rect key="frame" x="20" y="211" width="125" height="76"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6O2-sV-nYv">
+                                <rect key="frame" x="20" y="168" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="kcR-zK-Su3">
-                                <rect key="frame" x="175" y="211" width="125" height="76"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="kcR-zK-Su3">
+                                <rect key="frame" x="175" y="168" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCk-Za-gmZ">
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="NSs-5S-UmR">
-                                <rect key="frame" x="20" y="300" width="280" height="80"/>
+                                <rect key="frame" x="17" y="272" width="280" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -106,6 +106,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Lunch" id="m0e-OG-bvA">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Txv-oo-HzT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save lunch" id="Mxa-FB-jr1">
+                            <connections>
+                                <action selector="saveToListOfLunches:" destination="IPv-Ln-IKZ" id="xQ6-f8-D27"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="LunchDescription" destination="NSs-5S-UmR" id="XI1-sr-aLb"/>
@@ -234,12 +239,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5a3-UY-R4j">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="ShortCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShortCell" textLabel="S3a-mc-seO" detailTextLabel="uCK-Wr-2hB" imageView="m6s-Gb-QyD" style="IBUITableViewCellStyleSubtitle" id="5a3-UY-R4j">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S3a-mc-seO">
+                                            <rect key="frame" x="53" y="2" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uCK-Wr-2hB">
+                                            <rect key="frame" x="53" y="24" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="no_photo.png" id="m6s-Gb-QyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -321,6 +346,7 @@
         <class className="LAMyLunchController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAMyLunchController.h"/>
             <relationships>
+                <relationship kind="action" name="saveToListOfLunches:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="LunchDescription" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="firstImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fourthImage" candidateClass="UIImageView"/>
