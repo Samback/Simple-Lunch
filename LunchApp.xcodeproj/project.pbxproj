@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504CA92F16750E1F009992F9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504CA92E16750E1F009992F9 /* AssetsLibrary.framework */; };
 		505D7716166D26DD0071D672 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D7715166D26DD0071D672 /* UIKit.framework */; };
 		505D7718166D26DD0071D672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D7717166D26DD0071D672 /* Foundation.framework */; };
 		505D771A166D26DD0071D672 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D7719166D26DD0071D672 /* CoreGraphics.framework */; };
@@ -31,11 +32,12 @@
 		50AD58EE1671374B00AD47C2 /* LunchPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD58ED1671374B00AD47C2 /* LunchPrevious.m */; };
 		50AD58F11671375800AD47C2 /* _LunchPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD58F01671375800AD47C2 /* _LunchPrevious.m */; };
 		50AD58FE16713A3200AD47C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD58FD16713A3200AD47C2 /* CoreData.framework */; };
-		50AD592C1671532600AD47C2 /* Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD592B1671532600AD47C2 /* Photos.m */; };
-		50AD592F1671533100AD47C2 /* _Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AD592E1671533100AD47C2 /* _Photos.m */; };
+		50DF949616750166005E6ED4 /* _Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF949516750166005E6ED4 /* _Photo.m */; };
+		50DF9499167501B4005E6ED4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF9498167501B4005E6ED4 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		504CA92E16750E1F009992F9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		505D7711166D26DD0071D672 /* LunchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D7715166D26DD0071D672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		505D7717166D26DD0071D672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,10 +75,10 @@
 		50AD58EF1671375800AD47C2 /* _LunchPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _LunchPrevious.h; path = CoreDataMachine/_LunchPrevious.h; sourceTree = "<group>"; };
 		50AD58F01671375800AD47C2 /* _LunchPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _LunchPrevious.m; path = CoreDataMachine/_LunchPrevious.m; sourceTree = "<group>"; };
 		50AD58FD16713A3200AD47C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		50AD592A1671532600AD47C2 /* Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photos.h; path = CoreDataHuman/Photos.h; sourceTree = "<group>"; };
-		50AD592B1671532600AD47C2 /* Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photos.m; path = CoreDataHuman/Photos.m; sourceTree = "<group>"; };
-		50AD592D1671533100AD47C2 /* _Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Photos.h; path = CoreDataMachine/_Photos.h; sourceTree = "<group>"; };
-		50AD592E1671533100AD47C2 /* _Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Photos.m; path = CoreDataMachine/_Photos.m; sourceTree = "<group>"; };
+		50DF949416750166005E6ED4 /* _Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Photo.h; path = CoreDataMachine/_Photo.h; sourceTree = "<group>"; };
+		50DF949516750166005E6ED4 /* _Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Photo.m; path = CoreDataMachine/_Photo.m; sourceTree = "<group>"; };
+		50DF9497167501B4005E6ED4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = CoreDataHuman/Photo.h; sourceTree = "<group>"; };
+		50DF9498167501B4005E6ED4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = CoreDataHuman/Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504CA92F16750E1F009992F9 /* AssetsLibrary.framework in Frameworks */,
 				50AD58FE16713A3200AD47C2 /* CoreData.framework in Frameworks */,
 				507E1FE316712A8900BC562C /* MobileCoreServices.framework in Frameworks */,
 				505D7759166D3D2A0071D672 /* QuartzCore.framework in Frameworks */,
@@ -99,6 +102,7 @@
 		505D7706166D26DC0071D672 = {
 			isa = PBXGroup;
 			children = (
+				504CA92E16750E1F009992F9 /* AssetsLibrary.framework */,
 				50AD58FD16713A3200AD47C2 /* CoreData.framework */,
 				507E1FE216712A8900BC562C /* MobileCoreServices.framework */,
 				505D7758166D3D2A0071D672 /* QuartzCore.framework */,
@@ -196,8 +200,8 @@
 		50AD58EA1671372200AD47C2 /* CoreMachines */ = {
 			isa = PBXGroup;
 			children = (
-				50AD592D1671533100AD47C2 /* _Photos.h */,
-				50AD592E1671533100AD47C2 /* _Photos.m */,
+				50DF949416750166005E6ED4 /* _Photo.h */,
+				50DF949516750166005E6ED4 /* _Photo.m */,
 				50AD58EF1671375800AD47C2 /* _LunchPrevious.h */,
 				50AD58F01671375800AD47C2 /* _LunchPrevious.m */,
 			);
@@ -207,8 +211,8 @@
 		50AD58EB1671373100AD47C2 /* CoreHuman */ = {
 			isa = PBXGroup;
 			children = (
-				50AD592A1671532600AD47C2 /* Photos.h */,
-				50AD592B1671532600AD47C2 /* Photos.m */,
+				50DF9497167501B4005E6ED4 /* Photo.h */,
+				50DF9498167501B4005E6ED4 /* Photo.m */,
 				50AD58EC1671374B00AD47C2 /* LunchPrevious.h */,
 				50AD58ED1671374B00AD47C2 /* LunchPrevious.m */,
 			);
@@ -295,8 +299,8 @@
 				50AD58E91671349C00AD47C2 /* DataContainer.xcdatamodeld in Sources */,
 				50AD58EE1671374B00AD47C2 /* LunchPrevious.m in Sources */,
 				50AD58F11671375800AD47C2 /* _LunchPrevious.m in Sources */,
-				50AD592C1671532600AD47C2 /* Photos.m in Sources */,
-				50AD592F1671533100AD47C2 /* _Photos.m in Sources */,
+				50DF949616750166005E6ED4 /* _Photo.m in Sources */,
+				50DF9499167501B4005E6ED4 /* Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
