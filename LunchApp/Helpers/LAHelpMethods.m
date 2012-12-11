@@ -76,7 +76,6 @@
 
 + (void)imagefromAsset:(NSURL *)referenceURL atImageView:(UIImageView *)imageView andRect:(CGRect )rect{
    __block UIImage  *copyOfOriginalImage = nil;
-//    NSURL *referenceURL = [info objectForKey:UIImagePickerControllerReferenceURL];
     ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     [library assetForURL:referenceURL resultBlock:^(ALAsset *asset)
      {
@@ -89,6 +88,7 @@
          UIGraphicsEndImageContext();
          imageView.image = newImage;
          //rect.origin.y  += 20;
+         NSLog(@"Rect params out %@", NSStringFromCGRect(rect));
          imageView.frame = rect;
          imageView.backgroundColor = [UIColor redColor];
          [imageView reloadInputViews];
@@ -98,6 +98,5 @@
          // error handling
      }];
 }
-
 
 @end
