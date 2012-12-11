@@ -8,7 +8,7 @@
     lunch.nameOfLunch = name;
     lunch.descriptionOfLunch = description;
     lunch.dateLunch = [NSDate date];
-    for (NSURL *path in photosArray) {
+    for (NSString *path in photosArray) {
         [lunch addPhotosObject:[Photo photoWithPath:path andContex:DELEGATE.managedObjectContext]];
     }
 }

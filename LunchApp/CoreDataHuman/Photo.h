@@ -2,5 +2,5 @@
 
 @interface Photo : _Photo {}
 // Custom logic goes here.
-+ (Photo *)photoWithPath:(NSURL *)imagePath andContex:(NSManagedObjectContext *)context;
++ (Photo *)photoWithPath:(NSString *)imagePath andContex:(NSManagedObjectContext *)context;
 @end
