@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *thirdImage;
 @property (strong, nonatomic) IBOutlet UIImageView *fourthImage;
 @property (nonatomic, strong) NSArray *lunchImages;
+@property (nonatomic, strong) NSDictionary *aboutLunch;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (nonatomic) BOOL saved;
 @end
 
 @implementation LAMyLunchController
@@ -27,9 +30,8 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationItem.backBarButtonItem.title = @"Back";
-    _LunchDescription.text = [LAHelpMethods descriptionOfFood];
-    _lunchName.text = [LAHelpMethods nameOfFood];
-	// Do any additional setup after loading the view.
+    [self fillLabelsWithText];
+   	// Do any additional setup after loading the view.
     _lunchImages = @[_firstImage, _secondImage, _thirdImage, _fourthImage];
     CGRect lunchNameFrame = _lunchName.frame;
     CGRect descriptionFrame = _LunchDescription.frame;
@@ -40,22 +42,22 @@
         descriptionFrame.origin.y = lunchNameFrame.origin.y + lunchNameFrame.size.height + 110;
     }
     else{
-         descriptionFrame.origin.y = lunchNameFrame.origin.y + lunchNameFrame.size.height + 210;
+        descriptionFrame.origin.y = 270;
     }
     _LunchDescription.frame = descriptionFrame;
     for (int i = 0; i < _selectedImages.count; i++) {
-//       // UIImageView *img = (UIImageView *)_lunchImages[i];
-//        UIImageView *img = [[UIImageView alloc] initWithImage:[LAHelpMethods imagefromAsset:(NSURL *)_selectedImages[i]]];
-//        img.backgroundColor = [UIColor redColor];
-//        ((UIImageView *)_lunchImages[i]).image =  img.image ;
         UIImageView *currentIMV= (UIImageView*)_lunchImages[i];
         CGRect imRect = currentIMV.frame;
-        imRect.origin.y = lunchNameFrame.origin.y + lunchNameFrame.size.height;
         currentIMV.frame = imRect;
-        [LAHelpMethods imagefromAsset:_selectedImages[i] atImageView:currentIMV andRect:imRect];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [LAHelpMethods imagefromAsset:[NSURL URLWithString:_selectedImages[i]] atImageView:currentIMV andRect:imRect];
+            
+        });
     }
-        
+    if (!_saved){
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    
 }
 
 
@@ -74,8 +76,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addSelectedImages:(NSArray *)images{
+- (void)addSelectedImages:(NSArray *)images withInfo:(NSDictionary *)info andPossibilityToSave:(BOOL)save{
+    _aboutLunch = info;
     _selectedImages = images;
+    _saved = save;
 }
 - (IBAction)saveToListOfLunches:(UIBarButtonItem *)sender {
     [LunchPrevious newLunchWithName:_lunchName.text description:_LunchDescription.text andPhotos:_selectedImages];
@@ -85,6 +89,14 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:APP_NAME message:DONT_SAVED delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+    else{
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+}
+
+- (void)fillLabelsWithText{
+        _lunchName.text = [_aboutLunch valueForKey:NAME];//_aboutLunch[NAME];
+        _LunchDescription.text = [_aboutLunch valueForKey:DESCRIPTION];//_aboutLunch[DESCRIPTION];
 }
 
 - (void)viewDidUnload {
@@ -95,6 +107,7 @@
     [self setSecondImage:nil];
     [self setThirdImage:nil];
     [self setFourthImage:nil];
+    [self setSaveButton:nil];
     [super viewDidUnload];
 }
 

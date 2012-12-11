@@ -9,9 +9,11 @@
 #import "LABriefTableListOfLunchesController.h"
 #import "LunchPrevious.h"
 #import "Photo.h"
+#import "LAMyLunchController.h"
 
 @interface LABriefTableListOfLunchesController ()
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) LunchPrevious *selectedLunch;
 @end
 
 @implementation LABriefTableListOfLunchesController
@@ -36,11 +38,6 @@
 	}
     
     self.title = @"Lunch List";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,60 +84,24 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-    NSLog(@"Selected");
+    LunchPrevious *info = [_fetchedResultsController objectAtIndexPath:indexPath];
+    self.selectedLunch = info;
+    [self performSegueWithIdentifier:@"ShowLunchResult" sender:self];
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    LAMyLunchController *vc = [segue destinationViewController];
+    NSMutableArray *paths = [NSMutableArray array];
+    for (Photo *photo in [_selectedLunch.photos allObjects]) {
+        [paths addObject:photo.photoPath ];
+    }
+    [vc addSelectedImages:paths withInfo:@{NAME : _selectedLunch.nameOfLunch, DESCRIPTION : _selectedLunch.descriptionOfLunch} andPossibilityToSave:NO];
+}
 
 #pragma mark - NSFetchResult Methods
 - (NSFetchedResultsController *)fetchedResultsController {
@@ -162,9 +123,6 @@
     
     NSFetchedResultsController *theFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:DELEGATE.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-//    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-//                                        managedObjectContext:DELEGATE.managedObjectContext sectionNameKeyPath:nil
-//                                                   cacheName:nil];
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
     

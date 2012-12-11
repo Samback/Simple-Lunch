@@ -52,7 +52,7 @@
     if ([[segue identifier] isEqualToString:@"LAMyLunchController"])
     {
         LAMyLunchController *vc = [segue destinationViewController];
-        [vc addSelectedImages:_selectedImages];
+        [vc addSelectedImages:_selectedImages withInfo:@{NAME : [LAHelpMethods nameOfFood], DESCRIPTION: [LAHelpMethods descriptionOfFood]} andPossibilityToSave:YES];
     }
 }
 
@@ -89,7 +89,7 @@
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [_currentButton setBackgroundImage:newImage forState:UIControlStateNormal];
-    [_selectedImages setObject:[info objectForKey:UIImagePickerControllerReferenceURL] atIndexedSubscript:_currentButton.tag];
+    [_selectedImages setObject:[[info objectForKey:UIImagePickerControllerReferenceURL] description] atIndexedSubscript:_currentButton.tag];
     [self openNext];
     [self dismissModalViewControllerAnimated:YES];
 }

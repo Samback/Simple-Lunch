@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LAMyLunchController : UIViewController
-- (void)addSelectedImages:(NSArray *)images;
+- (void)addSelectedImages:(NSArray *)images withInfo:(NSDictionary *)info andPossibilityToSave:(BOOL)save;
 @end
