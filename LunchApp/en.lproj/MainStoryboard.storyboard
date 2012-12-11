@@ -68,19 +68,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="0Zq-AE-7un">
-                                <rect key="frame" x="20" y="64" width="100" height="100"/>
+                                <rect key="frame" x="20" y="43" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="FKJ-UD-Anp">
-                                <rect key="frame" x="175" y="64" width="100" height="100"/>
+                                <rect key="frame" x="175" y="43" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6O2-sV-nYv">
-                                <rect key="frame" x="20" y="168" width="100" height="100"/>
+                                <rect key="frame" x="20" y="165" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="kcR-zK-Su3">
-                                <rect key="frame" x="175" y="168" width="100" height="100"/>
+                                <rect key="frame" x="175" y="165" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCk-Za-gmZ">
@@ -91,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="NSs-5S-UmR">
-                                <rect key="frame" x="17" y="272" width="280" height="80"/>
+                                <rect key="frame" x="17" y="270" width="280" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -117,13 +117,14 @@
                         <outlet property="firstImage" destination="0Zq-AE-7un" id="zJ5-yo-hrm"/>
                         <outlet property="fourthImage" destination="kcR-zK-Su3" id="ebV-i8-qne"/>
                         <outlet property="lunchName" destination="xCk-Za-gmZ" id="kcW-r7-uKD"/>
+                        <outlet property="saveButton" destination="Mxa-FB-jr1" id="vDa-EI-CwZ"/>
                         <outlet property="secondImage" destination="FKJ-UD-Anp" id="TRu-bu-JvS"/>
                         <outlet property="thirdImage" destination="6O2-sV-nYv" id="PTu-Bh-z4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4F-7U-f9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="-510"/>
+            <point key="canvasLocation" x="2298" y="266"/>
         </scene>
         <!--Add Photos Controller - Add Photos-->
         <scene sceneID="ibb-RH-Xfb">
@@ -222,7 +223,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HwL-Kf-sxO" kind="relationship" relationship="viewControllers" id="yel-hj-uGF"/>
-                        <segue destination="neU-Ae-Fhd" kind="relationship" relationship="viewControllers" id="KoP-1f-xrV"/>
+                        <segue destination="Ote-gn-p3g" kind="relationship" relationship="viewControllers" id="KoP-1f-xrV"/>
                         <segue destination="AXE-Ru-gAB" kind="relationship" relationship="viewControllers" id="wlI-o9-UpN"/>
                     </connections>
                 </tabBarController>
@@ -230,12 +231,12 @@
             </objects>
             <point key="canvasLocation" x="-652" y="345"/>
         </scene>
-        <!--Brief Table List Of Lunches Controller - List-->
+        <!--Brief Table List Of Lunches Controller - Lunch List-->
         <scene sceneID="vRH-0O-hYM">
             <objects>
                 <tableViewController storyboardIdentifier="LABriefTableListOfLunchesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="neU-Ae-Fhd" customClass="LABriefTableListOfLunchesController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7rr-TB-RqE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -274,11 +275,14 @@
                             <outlet property="delegate" destination="neU-Ae-Fhd" id="Tpf-Gw-VBV"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" id="OKc-iF-IZn"/>
+                    <navigationItem key="navigationItem" title="Lunch List" id="e9v-w6-293"/>
+                    <connections>
+                        <segue destination="IPv-Ln-IKZ" kind="push" identifier="ShowLunchResult" id="554-hy-PCB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI2-N6-Otk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="259"/>
+            <point key="canvasLocation" x="623" y="259"/>
         </scene>
         <!--Camera View Controller - Camera-->
         <scene sceneID="94T-F1-oFj">
@@ -314,6 +318,25 @@
             </objects>
             <point key="canvasLocation" x="97" y="-510"/>
         </scene>
+        <!--Navigation Controller - List-->
+        <scene sceneID="tPE-dZ-yVm">
+            <objects>
+                <navigationController id="Ote-gn-p3g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" id="OKc-iF-IZn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f38-Km-JZa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="neU-Ae-Fhd" kind="relationship" relationship="rootViewController" id="Bje-Rs-jVH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUc-V8-VF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="259"/>
+        </scene>
     </scenes>
     <resources>
         <image name="no_photo.png" width="125" height="125"/>
@@ -322,7 +345,6 @@
         <class className="LAAddPhotosController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAAddPhotosController.h"/>
             <relationships>
-                <relationship kind="action" name="continue:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="photoFour" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="photoOne" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="photoThree" candidateClass="UIButton"/>
@@ -351,6 +373,7 @@
                 <relationship kind="outlet" name="firstImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fourthImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lunchName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="secondImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="thirdImage" candidateClass="UIImageView"/>
             </relationships>
@@ -361,4 +384,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="554-hy-PCB"/>
+    </inferredMetricsTieBreakers>
 </document>
