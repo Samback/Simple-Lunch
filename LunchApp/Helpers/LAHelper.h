@@ -7,3 +7,6 @@
 
 #define APP_NAME @"Lunch App"
 #define DONT_SAVED @"Sorry, data not saved, problems with memory"
+
+#define NAME @"name"
+#define DESCRIPTION @"description"
