@@ -91,6 +91,8 @@
     }
     else{
         self.navigationItem.rightBarButtonItem = nil;
+        DELEGATE.pathToJustCaputuredPhoto = @"";
+        DELEGATE.justcapturedPhoto = nil;
     }
 }
 

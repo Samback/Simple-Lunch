@@ -86,7 +86,9 @@
         } else {
             imageToSave = originalImage;
         }
-        
+        NSLog(@"PATH %@",[info  objectForKey:UIImagePickerControllerReferenceURL]);
+        DELEGATE.pathToJustCaputuredPhoto = [[info  objectForKey:UIImagePickerControllerReferenceURL] description];
+        DELEGATE.justcapturedPhoto = imageToSave;
         // Save the new image (original or edited) to the Camera Roll
         UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
     }

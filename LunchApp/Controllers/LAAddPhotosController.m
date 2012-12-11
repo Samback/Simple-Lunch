@@ -42,6 +42,11 @@
     _pickerController.delegate = self;
     _pickerController.allowsEditing = NO;
     _selectedImages = [NSMutableArray arrayWithCapacity:4];
+    if  (DELEGATE.pathToJustCaputuredPhoto && ![DELEGATE.pathToJustCaputuredPhoto isEqualToString:@""]){
+        [((UIButton *)_buttons[0]) setBackgroundImage:DELEGATE.justcapturedPhoto forState:UIControlStateNormal];
+        [_selectedImages setObject:DELEGATE.pathToJustCaputuredPhoto atIndexedSubscript:0];
+         ((UIButton *)_buttons[1]).hidden = NO;        
+    }
 
 }
 - (IBAction)continue:(UIBarButtonItem *)sender {
