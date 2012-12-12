@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lA5-rU-H5Q">
-                                <rect key="frame" x="20" y="95" width="86" height="21"/>
+                                <rect key="frame" x="20" y="95" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -360,7 +360,6 @@
         <class className="LAHomePageControllerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAHomePageControllerViewController.h"/>
             <relationships>
-                <relationship kind="action" name="clicktoContinue:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="descriptionOfFood" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="nameOfFood" candidateClass="UITextField"/>
             </relationships>
@@ -368,7 +367,6 @@
         <class className="LAMyLunchController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LAMyLunchController.h"/>
             <relationships>
-                <relationship kind="action" name="saveToListOfLunches:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="LunchDescription" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="firstImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fourthImage" candidateClass="UIImageView"/>

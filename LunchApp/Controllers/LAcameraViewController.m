@@ -86,11 +86,23 @@
         } else {
             imageToSave = originalImage;
         }
-        NSLog(@"PATH %@",[info  objectForKey:UIImagePickerControllerReferenceURL]);
-        DELEGATE.pathToJustCaputuredPhoto = [[info  objectForKey:UIImagePickerControllerReferenceURL] description];
-        DELEGATE.justcapturedPhoto = imageToSave;
-        // Save the new image (original or edited) to the Camera Roll
-        UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+//        NSLog(@"PATH %@",[info  objectForKey:UIImagePickerControllerReferenceURL]);
+//        DELEGATE.pathToJustCaputuredPhoto = [[info  objectForKey:UIImagePickerControllerReferenceURL] description];
+       DELEGATE.justcapturedPhoto = imageToSave;
+//        // Save the new image (original or edited) to the Camera Roll
+//      //  UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+//        UIImageWriteToSavedPhotosAlbum(imageToSave, self, @selector(thisImage:hasBeenSavedInPhotoAlbumWithError:usingContextInfo:), NULL);
+       // UIImage *viewImage = YOUR UIIMAGE  // --- mine was made from drawing context
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        // Request to save the image to camera roll
+        [library writeImageToSavedPhotosAlbum:[imageToSave CGImage] orientation:(ALAssetOrientation)[imageToSave imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
+            if (error) {
+                NSLog(@"error");
+            } else {
+                NSLog(@"url %@", assetURL);
+                DELEGATE.pathToJustCaputuredPhoto = [assetURL description];
+            }  
+        }];  
     }
     
     // Handle a movie capture
